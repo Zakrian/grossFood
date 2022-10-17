@@ -61,18 +61,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  function parallaxIntro(top) {
+  function parallax(top) {
     const imgOne = document.querySelector('.intro__bg-1'),
       imgTwo = document.querySelector('.intro__bg-2'),
       imgThree = document.querySelector('.intro__bg-3'),
       imgFour = document.querySelector('.intro__bg-4'),
-      imgFive = document.querySelector('.intro__bg-5');
+      imgFive = document.querySelector('.intro__bg-5'),
+      catalogImgOne = document.querySelector('.catalog__item-1__img'),
+      catalogImgTwo = document.querySelector('.catalog__item-9__img');
 
       imgOne.style.transform = `translateY(${top / -2}px)`;
       imgTwo.style.transform = `translateY(${top / -10}px)`;
       imgThree.style.transform = `translateY(${top / -8}px)`;
       imgFour.style.transform = `translateY(${top / -3}px)`;
       imgFive.style.transform = `translateY(${top / -2}px)`;
+      catalogImgOne.style.transform = `translateY(${top / -20}px)`;
+      catalogImgTwo.style.transform = `translateY(${top / -24}px)`;
   }
 
   window.addEventListener('scroll', () => {
@@ -80,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     headerBgColor();
 
-    parallaxIntro(top);
+    parallax(top);
   });
 
 });
