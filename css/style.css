@@ -604,7 +604,7 @@ main {
   position: absolute;
   top: 25%;
   left: 50%;
-  z-index: 1;
+  z-index: 9;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
