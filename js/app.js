@@ -70,13 +70,15 @@ document.addEventListener('DOMContentLoaded', () => {
       catalogImgOne = document.querySelector('.catalog__item-1__img'),
       catalogImgTwo = document.querySelector('.catalog__item-9__img');
 
-      imgOne.style.transform = `translateY(${top / -2}px)`;
-      imgTwo.style.transform = `translateY(${top / -10}px)`;
-      imgThree.style.transform = `translateY(${top / -8}px)`;
-      imgFour.style.transform = `translateY(${top / -3}px)`;
-      imgFive.style.transform = `translateY(${top / -2}px)`;
-      catalogImgOne.style.transform = `translateY(${top / -20}px)`;
-      catalogImgTwo.style.transform = `translateY(${top / -24}px)`;
+      if (window.innerWidth >= 767) {
+        imgOne.style.transform = `translateY(${top / -2}px)`;
+        imgTwo.style.transform = `translateY(${top / -10}px)`;
+        imgThree.style.transform = `translateY(${top / -8}px)`;
+        imgFour.style.transform = `translateY(${top / -3}px)`;
+        imgFive.style.transform = `translateY(${top / -2}px)`;
+        catalogImgOne.style.transform = `translateY(${top / -20}px)`;
+        catalogImgTwo.style.transform = `translateY(${top / -24}px)`;
+      }
   }
 
   window.addEventListener('scroll', () => {

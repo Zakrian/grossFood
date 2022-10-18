@@ -1,4 +1,13 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:regular,700&display=swap");
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts//Poppins-Bold.ttf");
+  font-weight: 700;
+}
 @font-face {
   font-family: "icons";
   src: url("../fonts/icons.ttf") format("truetype"), url("../fonts/icons.woff") format("woff"), url("../fonts/icons.svg") format("svg");
