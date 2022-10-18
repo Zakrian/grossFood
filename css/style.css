@@ -608,7 +608,7 @@ main {
   height: 770px;
   padding: 160px 0 0 0;
   margin-bottom: 190px;
-  background: url("../img/intro/introBg.jpg") center/cover no-repeat;
+  background: url("../img/intro/intro-bg.jpg") center/cover no-repeat;
 }
 .intro__content {
   position: absolute;
@@ -786,7 +786,7 @@ main {
   .intro {
     height: 800px;
     padding-top: 120px;
-    background: url("../img/intro/introBgMobile.jpg") center/cover no-repeat;
+    background: url("../img/intro/intro-bg-mobile.jpg") center/cover no-repeat;
   }
   .intro__content {
     top: 20%;
