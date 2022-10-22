@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<meta http-equiv="Permissions-Policy" content="interest-cohort=()"/>
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/null.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Гросс Фуд</title>
@@ -17,156 +18,364 @@
   <body>
     <div class="wrapper">
       <header class="header">
-				<div class="header__logo"><img src="img/logo.png" alt="ГроссФуд"></div>
-				<div class="header__content content-header">
-					<div class="content-header__top top-header">
-						<a href="#" class="top-header__location">г. Москва, Кавказский бульвар, 57</a>
-						<p class="top-header__work-time">Ежедневно с 9:00 до 20:00</p>
-						<a href="#" class="top-header__tel"> 8 (495) 792-80-08<span> Звонок по России бесплатный </span></a>
-						<a href="#" class="top-header__social"></a>
-						<a href="#" class="top-header__price _icon-upload">Запросить прайс</a>
-					</div>
-					<div class="content-header__bottom bottom-header">
-						<button class="btn bottom-header__catalog _icon-catalog">Каталог товаров</button>
-						<ul class="bottom-header__menu-list">
-							<li class="bottom-header__menu-item"><a href="#" class="bottom-header__menu-link">Акции</a></li>
-							<li class="bottom-header__menu-item"><a href="#" class="bottom-header__menu-link">Заказ</a></li>
-							<li class="bottom-header__menu-item"><a href="#" class="bottom-header__menu-link">О компании</a></li>
-							<li class="bottom-header__menu-item"><a href="#" class="bottom-header__menu-link">Программа лояльности</a></li>
-							<li class="bottom-header__menu-item"><a href="#" class="bottom-header__menu-link">Пресс-центр</a></li>
-							<li class="bottom-header__menu-item"><a href="#" class="bottom-header__menu-link">Контакты</a></li>
-						</ul>
-						<div class="bottom-header__actions">
-							<button class="bottom-header__icons bottom-header__search _icon-search"></button>
-							<button class="bottom-header__icons bottom-header__user _icon-user"></button>
-							<button class="bottom-header__icons bottom-header__favorite _icon-star"></button>
-							<div class="bottom-header__shop">
-								<button class="bottom-header__icons bottom-header__cart _icon-cart"></button>
-								<span class="bottom-header__total">12 345 P</span>
-							</div>
-						</div>
-						<div class="menu-icon">
-							<span></span>
-							<span></span>
-							<span></span>
-						</div>
-					</div>
-				</div>
-			</header>
+        <div class="header__logo">
+          <img src="img/logo.png" alt="ГроссФуд" />
+        </div>
+        <div class="header__content content-header">
+          <div class="content-header__top top-header">
+            <a href="#" class="top-header__location">г. Москва, Кавказский бульвар, 57</a>
+            <p class="top-header__work-time">Ежедневно с 9:00 до 20:00</p>
+            <a href="#" class="top-header__tel">8 (495) 792-80-08<span> Звонок по России бесплатный </span></a>
+            <a href="#" class="top-header__social"></a>
+            <a href="#" class="top-header__price _icon-upload">Запросить прайс</a>
+          </div>
+          <div class="content-header__bottom bottom-header">
+            <button class="btn bottom-header__catalog _icon-catalog">
+              Каталог товаров
+            </button>
+            <ul class="bottom-header__menu-list">
+              <li class="bottom-header__menu-item">
+                <a href="#" class="bottom-header__menu-link">Акции</a>
+              </li>
+              <li class="bottom-header__menu-item">
+                <a href="#" class="bottom-header__menu-link">Заказ</a>
+              </li>
+              <li class="bottom-header__menu-item">
+                <a href="#" class="bottom-header__menu-link">О компании</a>
+              </li>
+              <li class="bottom-header__menu-item">
+                <a href="#" class="bottom-header__menu-link">Программа лояльности</a>
+              </li>
+              <li class="bottom-header__menu-item">
+                <a href="#" class="bottom-header__menu-link">Пресс-центр</a>
+              </li>
+              <li class="bottom-header__menu-item">
+                <a href="#" class="bottom-header__menu-link">Контакты</a>
+              </li>
+            </ul>
+            <div class="bottom-header__actions">
+              <button class="bottom-header__icons bottom-header__search _icon-search"></button>
+              <button class="bottom-header__icons bottom-header__user _icon-user"></button>
+              <button class="bottom-header__icons bottom-header__favorite _icon-star"></button>
+              <div class="bottom-header__shop">
+                <button class="bottom-header__icons bottom-header__cart _icon-cart"></button>
+                <span class="bottom-header__total">12 345 P</span>
+              </div>
+            </div>
+            <div class="menu-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </header>
 
       <main class="main">
-				<section class="section intro">
-					<div class="section__container">
-						<div class="intro__content">
-							<div class="intro__logo">
-								<img src="img/logo.png" alt="ГроссФуд">
-							</div>
-							<h1 class="intro__title">Дистрибьютор продуктов питания  </h1>
-							<a href="#" class="btn intro__btn">Получить индивидуальное коммерческое предложение</a>
-						</div>
-						<div class="intro__bg intro__bg-1">
-							<img src="img/intro/introGrocery.png" alt="Бакалея">
-						</div>
-						<div class="intro__bg intro__bg-2">
-							<img src="img/intro/introProducts.png" alt="Продукты">
-						</div>
-						<div class="intro__bg intro__bg-3">
-							<img src="img/intro/introVegetables.png" alt="Вегетарианское">
-						</div>
-						<div class="intro__bg intro__bg-4">
-							<img src="img/intro/introFish.png" alt="Рыба">
-						</div>
-						<div class="intro__bg intro__bg-5">
-							<img src="img/intro/introMeat.png" alt="Мясо">
-						</div>
-					</div>
-				</section>
+        <section class="section intro">
+          <div class="section__container">
+            <div class="intro__content">
+              <div class="intro__logo">
+                <img src="img/logo.png" alt="ГроссФуд" />
+              </div>
+              <h1 class="intro__title">Дистрибьютор продуктов питания</h1>
+              <a href="#" class="btn intro__btn">Получить индивидуальное коммерческое предложение</a>
+            </div>
+            <div class="intro__bg intro__bg-1">
+              <img src="img/intro/introGrocery.png" alt="Бакалея" />
+            </div>
+            <div class="intro__bg intro__bg-2">
+              <img src="img/intro/introProducts.png" alt="Продукты" />
+            </div>
+            <div class="intro__bg intro__bg-3">
+              <img src="img/intro/introVegetables.png" alt="Вегетарианское" />
+            </div>
+            <div class="intro__bg intro__bg-4">
+              <img src="img/intro/introFish.png" alt="Рыба" />
+            </div>
+            <div class="intro__bg intro__bg-5">
+              <img src="img/intro/introMeat.png" alt="Мясо" />
+            </div>
+          </div>
+        </section>
 
-				<section class="section catalog">
-					<div class="catalog__container">
-						<div class="catalog__wrapper">
-							<div class="catalog__item catalog__item-1">
-								<h2 class="catalog__item_title">Каталог</h2>
-								<h4 class="catalog__item_descr catalog__item-1__descr">Работа напрямую с отечественными и зарубежными производителями</h4>
-								<img src="img/catalog/meat.png" alt="Мясо" class="catalog__item-1__img">
-							</div>
-							<div class="catalog__item catalog__item-2">
-								<div class="catalog__item_img">
-									<img src="img/catalog/beef.jpg" alt="Говядина">
+        <section class="section catalog">
+          <div class="catalog__container">
+            <div class="catalog__wrapper">
+              <div class="catalog__item catalog__item-1">
+                <h2 class="catalog__item_title">Каталог</h2>
+                <h4 class="catalog__item_descr catalog__item-1__descr">Работа напрямую с отечественными и зарубежными производителями</h4>
+                <img src="img/catalog/meat.png" alt="Мясо" class="catalog__item-1__img"/>
+              </div>
+              <div class="catalog__item catalog__item-2">
+                <div class="catalog__item_img">
+                  <img src="img/catalog/beef.jpg" alt="Говядина" />
+                </div>
+                <p class="catalog__item_text">Говядина</p>
+              </div>
+              <div class="catalog__item catalog__item-3">
+                <div class="catalog__item_img">
+                  <img src="img/catalog/pork.jpg" alt="Свинина" />
+                </div>
+                <p class="catalog__item_text">Свинина</p>
+              </div>
+              <div class="catalog__item catalog__item-4">
+                <div class="catalog__item_img">
+                  <img src="img/catalog/chicken.jpg" alt="Курица" />
+                </div>
+                <p class="catalog__item_text">Курица</p>
+              </div>
+              <div class="catalog__item catalog__item-5">
+                <div class="catalog__item_img">
+                  <img src="img/catalog/fish.jpg" alt="Рыба" />
+                </div>
+                <p class="catalog__item_text">Рыба</p>
+              </div>
+              <div class="catalog__item catalog__item-6">
+                <div class="catalog__item_img">
+                  <img src="img/catalog/turky.jpg" alt="Индейка" />
+                </div>
+                <p class="catalog__item_text">Индейка</p>
+              </div>
+              <div class="catalog__item catalog__item-7">
+                <div class="catalog__item_img">
+                  <img src="img/catalog/grocery.jpg" alt="Бакалея" />
+                </div>
+                <p class="catalog__item_text">Бакалея</p>
+              </div>
+              <div class="catalog__item catalog__item-8">
+                <div class="catalog__item_img">
+                  <img src="img/catalog/duck.jpg" alt="Утка" />
+                </div>
+                <p class="catalog__item_text">Утка</p>
+              </div>
+              <div class="catalog__item catalog__item-9">
+                <p class="catalog__item_descr">Минимальный процент глазури - максимальное качество</p>
+                <img src="img/catalog/fish.png" alt="Рыба" class="catalog__item-9__img"/>
+              </div>
+              <div class="catalog__item catalog__item-10">
+                <div class="catalog__item_img">
+                  <img src="img/catalog/rabbit.jpg" alt="Кролик" />
+                </div>
+                <p class="catalog__item_text">Кролик</p>
+              </div>
+              <div class="catalog__item catalog__item-11">
+                <div class="catalog__item_img">
+                  <img src="img/catalog/semi-finished.jpg" alt="Полуфабрикаты"/>
+                </div>
+                <p class="catalog__item_text">Полуфабрикаты</p>
+              </div>
+              <div class="catalog__item catalog__item-12">
+                <div class="catalog__item_img">
+                  <img src="img/catalog/fruits.jpg" alt="Фрукты и овощи" />
+                </div>
+                <p class="catalog__item_text">Фрукты и овощи</p>
+              </div>
+              <div class="catalog__item catalog__item-13">
+                <div class="catalog__item_img">
+                  <img src="img/catalog/economy.jpg" alt="Хозяйственные товары"/>
+                </div>
+                <p class="catalog__item_text">Хозяйственные товары</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- <section class="section price">
+          <div class="price__container">
+						<h4 class="price__title">Супер-цена</h4>
+						<div class="swiper price__swiper">
+							<div class="swiper-wrapper price__swiper-wrapper">
+								<div class="swiper-slide price__slide">
+									<img src="img/slider/products/liver.png" alt="Печень" class="price__slide_img">
+									<h6 class="price__slide_title">ГОВЯДИНА ПЕЧЕНЬ зам.</h6>
+									<div class="price__slide_actions actions-slide">
+										<div class="actions-slide__price">
+											<p class="actions-slide__coast">270<span class="pennies">20</span><span class="weight">за 1 кг</span></p>
+											<p class="actions-slide__aviable">В наличии</p>
+										</div>
+										<button class="btn actions-slide__btn _icon-cart">В корзину</button>
+									</div>
 								</div>
-								<p class="catalog__item_text">Говядина</p>
-							</div>
-							<div class="catalog__item catalog__item-3">
-								<div class="catalog__item_img">
-									<img src="img/catalog/pork.jpg" alt="Свинина">
+								<div class="swiper-slide price__slide">
+									<img src="img/slider/products/vinegar.png" alt="Уксус" class="price__slide_img">
+									<h6 class="price__slide_title">Уксус Яблочный нат.6% 500мл.</h6>
+									<div class="price__slide_actions actions-slide">
+										<div class="actions-slide__price">
+											<p class="actions-slide__coast">49<span class="pennies">20</span><span class="weight">за 1 шт</span></p>
+											<p class="actions-slide__aviable">В наличии</p>
+										</div>
+										<button class="btn actions-slide__btn _icon-cart">В корзину</button>
+									</div>
 								</div>
-								<p class="catalog__item_text">Свинина</p>
-							</div>
-							<div class="catalog__item catalog__item-4">
-								<div class="catalog__item_img">
-									<img src="img/catalog/chicken.jpg" alt="Курица">
+								<div class="swiper-slide price__slide">
+									<img src="img/slider/products/oil.png" alt="Масло" class="price__slide_img">
+									<h6 class="price__slide_title">Масло раф Донская Кухня в ассортименте</h6>
+									<div class="price__slide_actions actions-slide">
+										<div class="actions-slide__price">
+											<p class="actions-slide__coast">170<span class="pennies">08</span><span class="weight">за 1 шт</span></p>
+											<p class="actions-slide__aviable">В наличии</p>
+										</div>
+										<button class="btn actions-slide__btn _icon-cart">В корзину</button>
+									</div>
 								</div>
-								<p class="catalog__item_text">Курица</p>
-							</div>
-							<div class="catalog__item catalog__item-5">
-								<div class="catalog__item_img">
-									<img src="img/catalog/fish.jpg" alt="Рыба">
+								<div class="swiper-slide price__slide">
+									<img src="img/slider/products/pasta.png" alt="Макароны" class="price__slide_img">
+									<h6 class="price__slide_title">Макароны АМЕРИЯ 4кг Рожки</h6>
+									<div class="price__slide_actions actions-slide">
+										<div class="actions-slide__price">
+											<p class="actions-slide__coast">373<span class="pennies">20</span><span class="weight">за 1кг</span></p>
+											<p class="actions-slide__aviable">В наличии</p>
+										</div>
+										<button class="btn actions-slide__btn _icon-cart">В корзину</button>
+									</div>
 								</div>
-								<p class="catalog__item_text">Рыба</p>
 							</div>
-							<div class="catalog__item catalog__item-6">
-								<div class="catalog__item_img">
-									<img src="img/catalog/turky.jpg" alt="Индейка">
-								</div>
-								<p class="catalog__item_text">Индейка</p>
-							</div>
-							<div class="catalog__item catalog__item-7">
-								<div class="catalog__item_img">
-									<img src="img/catalog/grocery.jpg" alt="Бакалея">
-								</div>
-								<p class="catalog__item_text">Бакалея</p>
-							</div>
-							<div class="catalog__item catalog__item-8">
-								<div class="catalog__item_img">
-									<img src="img/catalog/duck.jpg" alt="Утка">
-								</div>
-								<p class="catalog__item_text">Утка</p>
-							</div>
-							<div class="catalog__item catalog__item-9">
-								<p class="catalog__item_descr">Минимальный процент глазури - максимальное качество</p>
-								<img src="img/catalog/fish.png" alt="Рыба" class="catalog__item-9__img">
-							</div>
-							<div class="catalog__item catalog__item-10">
-								<div class="catalog__item_img">
-									<img src="img/catalog/rabbit.jpg" alt="Кролик">
-								</div>
-								<p class="catalog__item_text">Кролик</p>
-							</div>
-							<div class="catalog__item catalog__item-11">
-								<div class="catalog__item_img">
-									<img src="img/catalog/semi-finished.jpg" alt="Полуфабрикаты">
-								</div>
-								<p class="catalog__item_text">Полуфабрикаты</p>
-							</div>
-							<div class="catalog__item catalog__item-12">
-								<div class="catalog__item_img">
-									<img src="img/catalog/fruits.jpg" alt="Фрукты и овощи">
-								</div>
-								<p class="catalog__item_text">Фрукты и овощи</p>
-							</div>
-							<div class="catalog__item catalog__item-13">
-								<div class="catalog__item_img">
-									<img src="img/catalog/economy.jpg" alt="Хозяйственные товары">
-								</div>
-								<p class="catalog__item_text">Хозяйственные товары</p>
-							</div>
+							<div class="swiper-button-prev price-button-prev"></div>
+							<div class="swiper-button-next price-button-next"></div>
 						</div>
 					</div>
-				</section>
-			</main>
+        </section> -->
+
+        <section class="section benefits">
+          <div class="benefits__container">
+            <div class="benefits__wrapper">
+              <div class="benefits__img">
+                <img src="img/ax&Meat.png" alt="Мясо">
+              </div>
+              <div class="benefits__item item-benefits">
+                <h4 class="item-benefits__title">Оперативная доставка</h4>
+                <p class="item-benefits__descr">Бесплатно привозим партию на следующий день после заказа. Доставляем собственным транспортом 6 дней в неделю. Осуществляем поставки по всей России точно в срок.</p>
+              </div>
+              <div class="benefits__item item-benefits">
+                <h4 class="item-benefits__title">Официальный дистрибьютор</h4>
+                <p class="item-benefits__descr">Предлагаем мясо от российских заводов и зарубежных импортёров. Сотрудничаем с производителями напрямую, без посредников, поэтому поставляем всё быстро и в любом объёме.</p>
+              </div>
+              <div class="benefits__item item-benefits">
+                <h4 class="item-benefits__title">Современная логистика</h4>
+                <p class="item-benefits__descr">Продукция хранится на складе класса «А», расположенном в пределах ТТК. Автопарк «Гросс Фуд» включает более 20 единиц грузовой техники для перевозки пищевой продукции. </p>
+              </div>
+              <div class="benefits__item item-benefits">
+                <h4 class="item-benefits__title">Предоставляем ветеринарные свидетельства и сертификаты</h4>
+                <p class="item-benefits__descr">Работаем по системе «Меркурий», выдаём полный пакет сопроводительной документации. </p>
+              </div>
+              <div class="benefits__item item-benefits">
+                <h4 class="item-benefits__title">Гибкие условия сотрудничества</h4>
+                <p class="item-benefits__descr">Можем рассмотреть отсрочку платежа от 7 дней.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section offer">
+          <div class="offer__container">
+            <div class="offer__wrapper">
+              <div class="offer__img">
+                <img src="img/grossCoin.png" alt="Программа лояльности">
+              </div>
+              <h4 class="title offer__title">Программа лояльности ГРОСС ФУД</h4>
+              <p class="offer__descr">Копите <span>GROSS coins</span> и списывайте их в счет стоимости заказа или обменивайте на ценные подарки!</p>
+              <button class="btn offer__btn _icon-arrow">Подробнее</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="section partners">
+          <div class="partners__container">
+            <div class="partners__form form">
+              <form action="POST">
+                <h3 class="form__title">Индивидуальное коммерческое предложение <span>для вашего бизнеса</span></h3>
+                <div class="form__radios niches">
+                  <h6 class="form__radios_title">Ваша ниша</h6>
+                  <div class="niches__inner">
+                    <label for="niche1">Ресторан/кафе/бар/фастфуд/пиццерия</label>
+                    <input type="radio" name="niche-input" id="niche1">
+                    <label for="niche2">Мясное или пищевое производство</label>
+                    <input type="radio" name="niche-input" id="niche2">
+                    <label for="niche3">Кулинарный или кондитерский цех</label>
+                    <input type="radio" name="niche-input" id="niche3">
+                    <label for="niche4">Гостиница или отель</label>
+                    <input type="radio" name="niche-input" id="niche4">
+                    <label for="niche5">Комбинат питания</label>
+                    <input type="radio" name="niche-input" id="niche5">
+                    <label for="niche6">Кейтеринговая служба/столовая</label>
+                    <input type="radio" name="niche-input" id="niche6">
+                  </div>
+                </div>
+                <div class="form__radios way-to-get">
+                  <h6 class="form__radios_title">Способ получения </h6>
+                  <div class="way-to-get__inner">
+                    <label for="wayToGet1">Доставка по МСК или МО</label>
+                    <input type="radio" name="way-to-get-input" id="wayToGet1">
+                    <label for="wayToGet2">Самовывоз</label>
+                    <input type="radio" name="way-to-get-input" id="wayToGet2">
+                    <label for="wayToGet3">Доставка в регионы</label>
+                    <input type="radio" name="way-to-get-input" id="wayToGet3">
+                  </div>
+                </div>
+                <div class="form__radios purchase">
+                  <h6 class="form__radios_title">Ваши объемы закупки </h6>
+                  <div class="purchase__inner">
+                    <label for="purchase1">200 000 руб.</label>
+                    <input type="radio" name="purchase-input" id="purchase1">
+                    <label for="purchase2">200 000 - 500 000 руб.</label>
+                    <input type="radio" name="purchase-input" id="purchase2">
+                    <label for="purchase3">более 500 000 руб.</label>
+                    <input type="radio" name="purchase-input" id="purchase3">
+                  </div>
+                </div>
+                <div class="form__data">
+                  <input type="tel" name="user-tel" placeholder="Телефон*" class="form__data_tel" id="userTel">
+                  <input type="email" name="user-email" placeholder="Почта*" class="form__data_email" id="userEmail">
+                  <button class="btn form__btn">Получить</button>
+                </div>
+              </form>
+            </div>
+            <div class="partners__more">
+              <h3 class="partners__title">С кем мы работаем </h3>
+              <p class="partners__descr">Мы делаем больше, чем остальные поставщики продуктов. Привозим оптом качественный продукт по выгодной цене. Проводим по ФГИС «Меркурий», доставляем на следующий день после заказа. Выполняем свои обязательства на 100% - работаем для бизнеса и понимаем, насколько для вас важны сроки и качество. Поставляем от производителей напрямую, поэтому цены приемлемые. Чтобы получить прайс, оставьте заявку на сайте или позвоните.</p>
+              <div class="partners__list">
+                <div class="partners__item">
+                  <span>Рестораны</span>
+                  <img src="img/form/catalog/restoraunt.png" alt="Рестораны">
+                </div>
+                <div class="partners__item">
+                  <span>Комбинаты питания</span>
+                  <img src="img/form/catalog/food.png" alt="Комбинаты питания">
+                </div>
+                <div class="partners__item">
+                  <span>Гостиницы</span>
+                  <img src="img/form/catalog/hotel.png" alt="Гостиницы">
+                </div>
+                <div class="partners__item">
+                  <span>Кафе и бары</span>
+                  <img src="img/form/catalog/cafe.png" alt="Кафе и бары">
+                </div>
+                <div class="partners__item">
+                  <span>Пищевые производства</span>
+                  <img src="img/form/catalog/production.png" alt="Пищевые производства">
+                </div>
+                <div class="partners__item">
+                  <span>Кулинарные и кондитерские цеха</span>
+                  <img src="img/form/catalog/cooking.png" alt="Кулинарные и кондитерские цеха">
+                </div>
+                <div class="partners__item">
+                  <span>Фаст-фуд и пиццерии</span>
+                  <img src="img/form/catalog/fastfood.png" alt="Фаст-фуд и пиццерии">
+                </div>
+                <div class="partners__item">
+                  <span>Мясные производства</span>
+                  <img src="img/form/catalog/meet.png" alt="Мясные производства">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
 
       <footer class="footer"></footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>

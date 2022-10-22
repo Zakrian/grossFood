@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         catalogImgOne.style.transform = `translateY(${top / -20}px)`;
         catalogImgTwo.style.transform = `translateY(${top / -24}px)`;
       }
+      // console.log(top);
   }
 
   window.addEventListener('scroll', () => {
@@ -88,5 +89,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     parallax(top);
   });
+
+  // const swiper = new Swiper('.price__swiper', {
+  //   slideClass: 'price__slide',
+  //   width: 230,
+  //   slidePerView: 2,
+  //   spaceBetween: 60,
+  //   loop: true,
+  //   grabCursor: true,
+  //   autoplay: {
+  //     delay: 5000,
+  //     speed: 1500
+  //   },
+  //   breakpoints: {
+  //     767: {
+  //       slidesPerView: 3,
+  //       spaceBetween: 20
+  //     }
+  //   },
+  
+  //   navigation: {
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev',
+  //   },
+  // });
 
 });
