@@ -9,11 +9,21 @@ document.addEventListener('DOMContentLoaded', () => {
     bottomHeader = document.querySelector('.bottom-header'),
     catalogBtn = document.querySelector('.bottom-header__catalog'),
     menuList = document.querySelector('.bottom-header__menu-list'),
-    uploadBtn = document.querySelector('.top-header__price');
+    uploadBtn = document.querySelector('.top-header__price'),
+    partnersSection = document.querySelector('.partners'),
+    topFooter = document.querySelector('.top-footer'),
+    socialFooter = document.querySelector('.social-footer'),
+    infoFooter = document.querySelector('.info-footer'),
+    connectionFooter = document.querySelector('.connection-footer');
 
   if (window.innerWidth <= 1200) {
     header.append(menuList);
     bottomHeader.append(uploadBtn);
+  }
+
+  if (window.innerWidth <= 1000) {
+    movingForm();
+    moveFooterTablet();
   }
 
   if (window.innerWidth <= 767) {
@@ -39,6 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileMenu.classList.remove('_show');
       body.classList.remove('_block');
     });
+  }
+
+  if (window.innerWidth <= 540) {
+    moveFooterMobile();
   }
 
   const mobileMenu = document.querySelector('.mobile-menu'),
@@ -70,16 +84,99 @@ document.addEventListener('DOMContentLoaded', () => {
       catalogImgOne = document.querySelector('.catalog__item-1__img'),
       catalogImgTwo = document.querySelector('.catalog__item-9__img');
 
-      if (window.innerWidth >= 767) {
-        imgOne.style.transform = `translateY(${top / -2}px)`;
-        imgTwo.style.transform = `translateY(${top / -10}px)`;
-        imgThree.style.transform = `translateY(${top / -8}px)`;
-        imgFour.style.transform = `translateY(${top / -3}px)`;
-        imgFive.style.transform = `translateY(${top / -2}px)`;
-        catalogImgOne.style.transform = `translateY(${top / -20}px)`;
-        catalogImgTwo.style.transform = `translateY(${top / -24}px)`;
-      }
-      // console.log(top);
+    if (window.innerWidth >= 767) {
+      imgOne.style.transform = `translateY(${top / -2}px)`;
+      imgTwo.style.transform = `translateY(${top / -10}px)`;
+      imgThree.style.transform = `translateY(${top / -8}px)`;
+      imgFour.style.transform = `translateY(${top / -3}px)`;
+      imgFive.style.transform = `translateY(${top / -2}px)`;
+      catalogImgOne.style.transform = `translateY(${top / -20}px)`;
+      catalogImgTwo.style.transform = `translateY(${top / -24}px)`;
+    }
+    // console.log(top);
+  }
+
+  function movingForm() {
+    const formSection = document.createElement('section');
+    formSection.classList.add('section', 'form-section');
+
+    formSection.innerHTML = `
+      <div class="form-section__container">
+        <div class="partners__form form">
+          <form action="POST">
+            <h3 class="form__title">Индивидуальное коммерческое предложение <span>для вашего бизнеса</span></h3>
+            <div class="form__radios niches">
+              <h6 class="form__radios_title">Ваша ниша</h6>
+              <div class="niches__inner">
+                <label for="niche1">Ресторан/кафе/бар/фастфуд/пиццерия</label>
+                <input type="radio" name="niche-input" id="niche1">
+                <label for="niche2">Мясное или пищевое производство</label>
+                <input type="radio" name="niche-input" id="niche2">
+                <label for="niche3">Кулинарный или кондитерский цех</label>
+                <input type="radio" name="niche-input" id="niche3">
+                <label for="niche4">Гостиница или отель</label>
+                <input type="radio" name="niche-input" id="niche4">
+                <label for="niche5">Комбинат питания</label>
+                <input type="radio" name="niche-input" id="niche5">
+                <label for="niche6">Кейтеринговая служба/столовая</label>
+                <input type="radio" name="niche-input" id="niche6">
+              </div>
+            </div>
+            <div class="form__radios way-to-get">
+              <h6 class="form__radios_title">Способ получения </h6>
+              <div class="way-to-get__inner">
+                <label for="wayToGet1" class="checked">Доставка по МСК или МО</label>
+                <input type="radio" name="way-to-get-input" id="wayToGet1">
+                <label for="wayToGet2">Самовывоз</label>
+                <input type="radio" name="way-to-get-input" id="wayToGet2">
+                <label for="wayToGet3">Доставка в регионы</label>
+                <input type="radio" name="way-to-get-input" id="wayToGet3">
+              </div>
+            </div>
+            <div class="form__radios purchase">
+              <h6 class="form__radios_title">Ваши объемы закупки </h6>
+              <div class="purchase__inner">
+                <label for="purchase1">200 000 руб.</label>
+                <input type="radio" name="purchase-input" id="purchase1">
+                <label for="purchase2">200 000 - 500 000 руб.</label>
+                <input type="radio" name="purchase-input" id="purchase2">
+                <label for="purchase3">более 500 000 руб.</label>
+                <input type="radio" name="purchase-input" id="purchase3">
+              </div>
+            </div>
+            <div class="form__data">
+              <input type="tel" name="user-tel" placeholder="Телефон*" class="form__data_tel" id="userTel">
+              <input type="email" name="user-email" placeholder="Почта*" class="form__data_email" id="userEmail">
+              <button class="btn form__btn">Получить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    `;
+
+    partnersSection.insertAdjacentElement('afterend', formSection);
+  }
+
+  function moveFooterTablet() {
+    const newLeft = document.createElement('div'),
+      newRight = document.createElement('div');
+
+    newLeft.classList.add('top-footer__left');
+    newRight.classList.add('top-footer__right');
+
+    newLeft.append(socialFooter);
+    newLeft.append(connectionFooter);
+    newRight.append(infoFooter);
+
+    topFooter.append(newLeft);
+    topFooter.append(newRight);
+  }
+
+  function moveFooterMobile() {
+    const footerLeft = document.querySelector('.top-footer__left'),
+      footerRight = document.querySelector('.top-footer__right');
+
+      footerLeft.insertBefore(footerRight, connectionFooter);
   }
 
   window.addEventListener('scroll', () => {
@@ -90,28 +187,5 @@ document.addEventListener('DOMContentLoaded', () => {
     parallax(top);
   });
 
-  // const swiper = new Swiper('.price__swiper', {
-  //   slideClass: 'price__slide',
-  //   width: 230,
-  //   slidePerView: 2,
-  //   spaceBetween: 60,
-  //   loop: true,
-  //   grabCursor: true,
-  //   autoplay: {
-  //     delay: 5000,
-  //     speed: 1500
-  //   },
-  //   breakpoints: {
-  //     767: {
-  //       slidesPerView: 3,
-  //       spaceBetween: 20
-  //     }
-  //   },
-  
-  //   navigation: {
-  //     nextEl: '.swiper-button-next',
-  //     prevEl: '.swiper-button-prev',
-  //   },
-  // });
 
 });
