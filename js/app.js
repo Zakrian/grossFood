@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     topFooter = document.querySelector('.top-footer'),
     socialFooter = document.querySelector('.social-footer'),
     infoFooter = document.querySelector('.info-footer'),
-    connectionFooter = document.querySelector('.connection-footer');
+    connectionFooter = document.querySelector('.connection-footer'),
+    checkLabels = document.querySelectorAll('.form__label');
 
   if (window.innerWidth <= 1200) {
     header.append(menuList);
@@ -82,7 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
       imgFour = document.querySelector('.intro__bg-4'),
       imgFive = document.querySelector('.intro__bg-5'),
       catalogImgOne = document.querySelector('.catalog__item-1__img'),
-      catalogImgTwo = document.querySelector('.catalog__item-9__img');
+      catalogImgTwo = document.querySelector('.catalog__item-9__img'),
+      benefitsImg = document.querySelector('.benefits__img');
 
     if (window.innerWidth >= 767) {
       imgOne.style.transform = `translateY(${top / -2}px)`;
@@ -92,8 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
       imgFive.style.transform = `translateY(${top / -2}px)`;
       catalogImgOne.style.transform = `translateY(${top / -20}px)`;
       catalogImgTwo.style.transform = `translateY(${top / -24}px)`;
+      benefitsImg.style.transform = `translateY(${top / -20}px)`;
     }
-    // console.log(top);
   }
 
   function movingForm() {
@@ -176,7 +178,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const footerLeft = document.querySelector('.top-footer__left'),
       footerRight = document.querySelector('.top-footer__right');
 
-      footerLeft.insertBefore(footerRight, connectionFooter);
+    footerLeft.insertBefore(footerRight, connectionFooter);
+  }
+
+  function removeShowClass(element, selector) {
+    element.classList.remove(selector);
   }
 
   window.addEventListener('scroll', () => {
@@ -187,5 +193,65 @@ document.addEventListener('DOMContentLoaded', () => {
     parallax(top);
   });
 
+  document.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = e.target,
+      searchIcon = document.querySelector('.bottom-header__search'),
+      userIcon = document.querySelector('.bottom-header__user'),
+      favoriteIcon = document.querySelector('.bottom-header__favorite'),
+      cartIcon = document.querySelector('.bottom-header__cart'),
+      search = document.querySelector('.search-input'),
+      user = document.querySelector('.user__modal'),
+      favorite = document.querySelector('.favorite__modal'),
+      cart = document.querySelector('.cart__modal');
+
+    if (target && target == searchIcon) {
+      target.classList.toggle('_active');
+      search.classList.toggle('_show-search');
+      removeShowClass(user, '_show-modal');
+      removeShowClass(favorite, '_show-modal');
+      removeShowClass(cart, '_show-modal');
+      removeShowClass(userIcon, '_active');
+      removeShowClass(favoriteIcon, '_active');
+      removeShowClass(cartIcon, '_active');
+    }
+    if (target && target == userIcon) {
+      target.classList.toggle('_active');
+      user.classList.toggle('_show-modal');
+      removeShowClass(search, '_show-search');
+      removeShowClass(favorite, '_show-modal');
+      removeShowClass(cart, '_show-modal');
+      removeShowClass(searchIcon, '_active');
+      removeShowClass(favoriteIcon, '_active');
+      removeShowClass(cartIcon, '_active');
+    }
+    if (target && target == favoriteIcon) {
+      target.classList.toggle('_active');
+      favorite.classList.toggle('_show-modal');
+      removeShowClass(search, '_show-search');
+      removeShowClass(user, '_show-modal');
+      removeShowClass(cart, '_show-modal');
+      removeShowClass(searchIcon, '_active');
+      removeShowClass(userIcon, '_active');
+      removeShowClass(cartIcon, '_active');
+    }
+    if (target && target == cartIcon) {
+      target.classList.toggle('_active');
+      cart.classList.toggle('_show-modal');
+      removeShowClass(search, '_show-search');
+      removeShowClass(user, '_show-modal');
+      removeShowClass(favorite, '_show-modal');
+      removeShowClass(searchIcon, '_active');
+      removeShowClass(userIcon, '_active');
+      removeShowClass(favoriteIcon, '_active');
+    }
+
+    if (target && target == catalogBtn) {
+      console.log(header.scrollHeight);
+
+      // window.scrollTo(120)
+    }
+
+  });
 
 });

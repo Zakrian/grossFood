@@ -54,13 +54,101 @@
               </li>
             </ul>
             <div class="bottom-header__actions">
+
               <button class="bottom-header__icons bottom-header__search _icon-search"></button>
+              <input type="search" name="search" class="search-input" id="search">
+
               <button class="bottom-header__icons bottom-header__user _icon-user"></button>
+              <div class="user__modal">
+                <div class="user__logo"><img src="img/icons/user.png" alt="Пользователь"></div>
+                <h5 class="user__name">Вселенский Андрей</h5>
+                <div class="user__btns">
+                  <a href="#" class="user__cards"><img src="img/icons/cards.png" alt="Привязанные карты" title="Привязанные карты"></a>
+                  <a href="#" class="user__orders"><img src="img/icons/orders.png" alt="Заказы" title="Все заказы"></a>
+                  <a href="#" class="user__edit"><img src="img/icons/edit.png" alt="Редактировать профиль" title="Редактировать профиль"></a>
+                </div>
+              </div>
+
               <button class="bottom-header__icons bottom-header__favorite _icon-star"></button>
+              <div class="favorite__modal">
+                <div class="favorite__modal_wrapper">
+                  <div class="favorite__modal_item">
+                    <div class="favorite__modal_item-img">
+                      <img src="img/icons/order.png" alt="Фото товара">
+                    </div>
+                    <p class="favorite__modal_item-name">Вырезка говяжья</p>
+                    <a class="favorite__modal_item-delete"></a>
+                  </div>
+                  <div class="favorite__modal_item">
+                    <div class="favorite__modal_item-img">
+                      <img src="img/icons/order.png" alt="Фото товара">
+                    </div>
+                    <p class="favorite__modal_item-name">Филе лосося</p>
+                    <button class="favorite__modal_item-delete"></button>
+                  </div>
+                  <div class="favorite__modal_item">
+                    <div class="favorite__modal_item-img">
+                      <img src="img/icons/order.png" alt="Фото товара">
+                    </div>
+                    <p class="favorite__modal_item-name">Филе индейки</p>
+                    <button class="favorite__modal_item-delete"></button>
+                  </div>
+                  <div class="favorite__modal_item">
+                    <div class="favorite__modal_item-img">
+                      <img src="img/icons/order.png" alt="Фото товара">
+                    </div>
+                    <p class="favorite__modal_item-name">Тушка куринная</p>
+                    <a class="favorite__modal_item-delete"></a>
+                  </div>
+                  <div class="favorite__modal_item">
+                    <div class="favorite__modal_item-img">
+                      <img src="img/icons/order.png" alt="Фото товара">
+                    </div>
+                    <p class="favorite__modal_item-name">Стейк форель</p>
+                    <button class="favorite__modal_item-delete"></button>
+                  </div>
+                  <div class="favorite__modal_item">
+                    <div class="favorite__modal_item-img">
+                      <img src="img/icons/order.png" alt="Фото товара">
+                    </div>
+                    <p class="favorite__modal_item-name">Стейк говядина мраморная</p>
+                    <button class="favorite__modal_item-delete"></button>
+                  </div>
+                  <div class="favorite__modal_item">
+                    <div class="favorite__modal_item-img">
+                      <img src="img/icons/order.png" alt="Фото товара">
+                    </div>
+                    <p class="favorite__modal_item-name">Голени индейки</p>
+                    <button class="favorite__modal_item-delete"></button>
+                  </div>
+                </div>
+              </div>
+
               <div class="bottom-header__shop">
                 <button class="bottom-header__icons bottom-header__cart _icon-cart"></button>
                 <span class="bottom-header__total">12 345 P</span>
               </div>
+              <div class="cart__modal">
+                <div class="cart__modal_wrapper">
+                  <div class="cart__modal_item">
+                    <div class="cart__modal_item-img">
+                      <img src="img/icons/order.png" alt="Фото товара">
+                    </div>
+                    <p class="cart__modal_item-name">Вырезка говяжья 10кг</p>
+                    <span class="cart__modal_item-price">6835 руб.</span>
+                    <a class="cart__modal_item-delete"></a>
+                  </div>
+                  <div class="cart__modal_item">
+                    <div class="cart__modal_item-img">
+                      <img src="img/icons/order.png" alt="Фото товара">
+                    </div>
+                    <p class="cart__modal_item-name">Лосось филе 5кг</p>
+                    <span class="cart__modal_item-price">8943 руб</span>
+                    <button class="cart__modal_item-delete"></button>
+                  </div>
+                </div>
+              </div>
+
             </div>
             <div class="menu-icon">
               <span></span>
@@ -99,7 +187,7 @@
           </div>
         </section>
 
-        <section class="section catalog">
+        <section class="section catalog" id="catalog">
           <div class="catalog__container">
             <div class="catalog__wrapper">
               <div class="catalog__item catalog__item-1">
@@ -288,39 +376,39 @@
                 <div class="form__radios niches">
                   <h6 class="form__radios_title">Ваша ниша</h6>
                   <div class="niches__inner">
-                    <label for="niche1">Ресторан/кафе/бар/фастфуд/пиццерия</label>
+                    <label for="niche1" class="form__label">Ресторан/кафе/бар/фастфуд/пиццерия</label>
                     <input type="radio" name="niche-input" id="niche1">
-                    <label for="niche2">Мясное или пищевое производство</label>
+                    <label for="niche2" class="form__label">Мясное или пищевое производство</label>
                     <input type="radio" name="niche-input" id="niche2">
-                    <label for="niche3">Кулинарный или кондитерский цех</label>
+                    <label for="niche3" class="form__label">Кулинарный или кондитерский цех</label>
                     <input type="radio" name="niche-input" id="niche3">
-                    <label for="niche4">Гостиница или отель</label>
+                    <label for="niche4" class="form__label">Гостиница или отель</label>
                     <input type="radio" name="niche-input" id="niche4">
-                    <label for="niche5">Комбинат питания</label>
+                    <label for="niche5" class="form__label">Комбинат питания</label>
                     <input type="radio" name="niche-input" id="niche5">
-                    <label for="niche6">Кейтеринговая служба/столовая</label>
+                    <label for="niche6" class="form__label">Кейтеринговая служба/столовая</label>
                     <input type="radio" name="niche-input" id="niche6">
                   </div>
                 </div>
                 <div class="form__radios way-to-get">
                   <h6 class="form__radios_title">Способ получения </h6>
                   <div class="way-to-get__inner">
-                    <label for="wayToGet1" class="checked">Доставка по МСК или МО</label>
+                    <label for="wayToGet1" class="form__label">Доставка по МСК или МО</label>
                     <input type="radio" name="way-to-get-input" id="wayToGet1">
-                    <label for="wayToGet2">Самовывоз</label>
+                    <label for="wayToGet2" class="form__label">Самовывоз</label>
                     <input type="radio" name="way-to-get-input" id="wayToGet2">
-                    <label for="wayToGet3">Доставка в регионы</label>
+                    <label for="wayToGet3" class="form__label">Доставка в регионы</label>
                     <input type="radio" name="way-to-get-input" id="wayToGet3">
                   </div>
                 </div>
                 <div class="form__radios purchase">
                   <h6 class="form__radios_title">Ваши объемы закупки </h6>
                   <div class="purchase__inner">
-                    <label for="purchase1">200 000 руб.</label>
+                    <label for="purchase1" class="form__label">200 000 руб.</label>
                     <input type="radio" name="purchase-input" id="purchase1">
-                    <label for="purchase2">200 000 - 500 000 руб.</label>
+                    <label for="purchase2" class="form__label">200 000 - 500 000 руб.</label>
                     <input type="radio" name="purchase-input" id="purchase2">
-                    <label for="purchase3">более 500 000 руб.</label>
+                    <label for="purchase3" class="form__label">более 500 000 руб.</label>
                     <input type="radio" name="purchase-input" id="purchase3">
                   </div>
                 </div>
