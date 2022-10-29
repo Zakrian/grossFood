@@ -15,7 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
     socialFooter = document.querySelector('.social-footer'),
     infoFooter = document.querySelector('.info-footer'),
     connectionFooter = document.querySelector('.connection-footer'),
-    checkLabels = document.querySelectorAll('.form__label');
+    form = document.querySelector('form'),
+    radioNiches = document.querySelectorAll('.niches__inner .form__label'),
+    radioWayToGet = document.querySelectorAll('.way-to-get__inner .form__label'),
+    radioPurchase = document.querySelectorAll('.purchase__inner .form__label');
+
 
   if (window.innerWidth <= 1200) {
     header.append(menuList);
@@ -103,57 +107,89 @@ document.addEventListener('DOMContentLoaded', () => {
     formSection.classList.add('section', 'form-section');
 
     formSection.innerHTML = `
-      <div class="form-section__container">
-        <div class="partners__form form">
-          <form action="POST">
-            <h3 class="form__title">Индивидуальное коммерческое предложение <span>для вашего бизнеса</span></h3>
-            <div class="form__radios niches">
-              <h6 class="form__radios_title">Ваша ниша</h6>
-              <div class="niches__inner">
-                <label for="niche1">Ресторан/кафе/бар/фастфуд/пиццерия</label>
-                <input type="radio" name="niche-input" id="niche1">
-                <label for="niche2">Мясное или пищевое производство</label>
-                <input type="radio" name="niche-input" id="niche2">
-                <label for="niche3">Кулинарный или кондитерский цех</label>
-                <input type="radio" name="niche-input" id="niche3">
-                <label for="niche4">Гостиница или отель</label>
-                <input type="radio" name="niche-input" id="niche4">
-                <label for="niche5">Комбинат питания</label>
-                <input type="radio" name="niche-input" id="niche5">
-                <label for="niche6">Кейтеринговая служба/столовая</label>
-                <input type="radio" name="niche-input" id="niche6">
-              </div>
-            </div>
-            <div class="form__radios way-to-get">
-              <h6 class="form__radios_title">Способ получения </h6>
-              <div class="way-to-get__inner">
-                <label for="wayToGet1" class="checked">Доставка по МСК или МО</label>
-                <input type="radio" name="way-to-get-input" id="wayToGet1">
-                <label for="wayToGet2">Самовывоз</label>
-                <input type="radio" name="way-to-get-input" id="wayToGet2">
-                <label for="wayToGet3">Доставка в регионы</label>
-                <input type="radio" name="way-to-get-input" id="wayToGet3">
-              </div>
-            </div>
-            <div class="form__radios purchase">
-              <h6 class="form__radios_title">Ваши объемы закупки </h6>
-              <div class="purchase__inner">
-                <label for="purchase1">200 000 руб.</label>
-                <input type="radio" name="purchase-input" id="purchase1">
-                <label for="purchase2">200 000 - 500 000 руб.</label>
-                <input type="radio" name="purchase-input" id="purchase2">
-                <label for="purchase3">более 500 000 руб.</label>
-                <input type="radio" name="purchase-input" id="purchase3">
-              </div>
-            </div>
-            <div class="form__data">
-              <input type="tel" name="user-tel" placeholder="Телефон*" class="form__data_tel" id="userTel">
-              <input type="email" name="user-email" placeholder="Почта*" class="form__data_email" id="userEmail">
-              <button class="btn form__btn">Получить</button>
-            </div>
-          </form>
+      <form action="#" class="form">
+        <h2 class="form__title">Индивидуальное коммерческое предложение <span>для вашего бизнеса</span></h2>
+        <div class="form__niches niches">
+          <h3 class="niches__title form-title">Ваша ниша</h3>
+          <div class="niches__radios">
+            <label class="radio radio__niches">
+              <input checked type="radio" name="niche" class="radio__input">
+              <span class="radio__custom-input"></span>
+              Ресторан/кафе/бар/фастфуд/пиццерия
+            </label>
+            <label class="radio radio__niches">
+              <input type="radio" name="niche" class="radio__input">
+              <span class="radio__custom-input"></span>
+              Мясное или пищевое производство
+            </label>
+            <label class="radio radio__niches">
+              <input type="radio" name="niche" class="radio__input">
+              <span class="radio__custom-input"></span>
+              Кулинарный или кондитерский цех
+            </label>
+            <label class="radio radio__niches">
+              <input type="radio" name="niche" class="radio__input">
+              <span class="radio__custom-input"></span>
+              Гостиница или отель
+            </label>
+            <label class="radio radio__niches">
+              <input type="radio" name="niche" class="radio__input">
+              <span class="radio__custom-input"></span>
+              Комбинат питания
+            </label>
+            <label class="radio radio__niches">
+              <input type="radio" name="niche" class="radio__input">
+              <span class="radio__custom-input"></span>
+              Кейтеринговая служба/столовая
+            </label>
+          </div>
         </div>
-      </div>
+        <div class="form__receiving receiving">
+          <h3 class="receiving__title form-title">Способ получения</h3>
+          <div class="receiving__radios">
+            <label class="radio radio__receiving">
+              <input checked type="radio" name="receiving" class="radio__input">
+              <span class="radio__custom-input"></span>
+              Доставка по МСК или МО
+            </label>
+            <label class="radio radio__receiving">
+              <input type="radio" name="receiving" class="radio__input">
+              <span class="radio__custom-input"></span>
+              Самовывоз
+            </label>
+            <label class="radio radio__receiving">
+              <input type="radio" name="receiving" class="radio__input">
+              <span class="radio__custom-input"></span>
+              Доставка в регионы
+            </label>
+          </div>
+        </div>
+        <div class="form__purchase purchase">
+          <h3 class="purchase__title form-title">Ваши объемы закупки </h3>
+          <div class="purchase__radios">
+            <label class="radio radio__purchase">
+              <input checked type="radio" name="purchase" class="radio__input">
+              <span class="radio__custom-input"></span>
+              200 000 руб.
+            </label>
+            <label class="radio radio__purchase">
+              <input type="radio" name="purchase" class="radio__input">
+              <span class="radio__custom-input"></span>
+              200 000 - 500 000 руб.
+            </label>
+            <label class="radio radio__purchase">
+              <input type="radio" name="purchase" class="radio__input">
+              <span class="radio__custom-input"></span>
+              более 500 000 руб.
+            </label>
+          </div>
+        </div>
+        <div class="form__data data">
+          <input type="tel" name="user-tel" placeholder="Телефон*" class="data__tel">
+          <input type="email" name="user-email" placeholder="Почта*" class="data__email">
+          <button type="submit" class="btn data__btn">Получить</button>
+        </div>
+      </form>
     `;
 
     partnersSection.insertAdjacentElement('afterend', formSection);
@@ -194,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.addEventListener('click', (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const target = e.target,
       searchIcon = document.querySelector('.bottom-header__search'),
       userIcon = document.querySelector('.bottom-header__user'),
@@ -245,13 +281,6 @@ document.addEventListener('DOMContentLoaded', () => {
       removeShowClass(userIcon, '_active');
       removeShowClass(favoriteIcon, '_active');
     }
-
-    if (target && target == catalogBtn) {
-      console.log(header.scrollHeight);
-
-      // window.scrollTo(120)
-    }
-
   });
 
 });
