@@ -1,24 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   const body = document.querySelector('body'),
+    toTop = document.querySelector('#top'),
     header = document.querySelector('.header'),
     headerLogo = document.querySelector('.header__logo'),
+    headerLogoImg = document.querySelector('.header__logo img'),
     location = document.querySelector('.top-header__location').cloneNode(true),
     number = document.querySelector('.top-header__tel').cloneNode(true),
     social = document.querySelector('.top-header__social'),
     bottomHeader = document.querySelector('.bottom-header'),
     catalogBtn = document.querySelector('.bottom-header__catalog'),
     menuList = document.querySelector('.bottom-header__menu-list'),
+    introBtn = document.querySelector('.intro__btn'),
     uploadBtn = document.querySelector('.top-header__price'),
     partnersSection = document.querySelector('.partners'),
     topFooter = document.querySelector('.top-footer'),
     socialFooter = document.querySelector('.social-footer'),
     infoFooter = document.querySelector('.info-footer'),
     connectionFooter = document.querySelector('.connection-footer'),
-    form = document.querySelector('form'),
-    radioNiches = document.querySelectorAll('.niches__inner .form__label'),
-    radioWayToGet = document.querySelectorAll('.way-to-get__inner .form__label'),
-    radioPurchase = document.querySelectorAll('.purchase__inner .form__label');
+    form = document.querySelector('#form');
 
 
   if (window.innerWidth <= 1200) {
@@ -239,7 +239,9 @@ document.addEventListener('DOMContentLoaded', () => {
       search = document.querySelector('.search-input'),
       user = document.querySelector('.user__modal'),
       favorite = document.querySelector('.favorite__modal'),
-      cart = document.querySelector('.cart__modal');
+      cart = document.querySelector('.cart__modal'),
+      cartWrapper = document.querySelector('.cart__modal_wrapper'),
+      cartItem = document.querySelectorAll('.cart__modal_item');
 
     if (target && target == searchIcon) {
       target.classList.toggle('_active');
@@ -250,8 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
       removeShowClass(userIcon, '_active');
       removeShowClass(favoriteIcon, '_active');
       removeShowClass(cartIcon, '_active');
-    }
-    if (target && target == userIcon) {
+    } else if (target && target == userIcon) {
       target.classList.toggle('_active');
       user.classList.toggle('_show-modal');
       removeShowClass(search, '_show-search');
@@ -260,8 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
       removeShowClass(searchIcon, '_active');
       removeShowClass(favoriteIcon, '_active');
       removeShowClass(cartIcon, '_active');
-    }
-    if (target && target == favoriteIcon) {
+    } else if (target && target == favoriteIcon) {
       target.classList.toggle('_active');
       favorite.classList.toggle('_show-modal');
       removeShowClass(search, '_show-search');
@@ -270,8 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
       removeShowClass(searchIcon, '_active');
       removeShowClass(userIcon, '_active');
       removeShowClass(cartIcon, '_active');
-    }
-    if (target && target == cartIcon) {
+    } else if (target && target == cartIcon) {
       target.classList.toggle('_active');
       cart.classList.toggle('_show-modal');
       removeShowClass(search, '_show-search');
@@ -280,6 +279,15 @@ document.addEventListener('DOMContentLoaded', () => {
       removeShowClass(searchIcon, '_active');
       removeShowClass(userIcon, '_active');
       removeShowClass(favoriteIcon, '_active');
+    }
+
+    if (target && target == introBtn) {
+      e.preventDefault();
+      form.scrollIntoView({ behavior: 'smooth' });
+    }
+    if (target && target == headerLogoImg) {
+      e.preventDefault();
+      toTop.scrollIntoView({ behavior: 'smooth' });
     }
   });
 

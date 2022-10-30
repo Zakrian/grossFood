@@ -136,6 +136,7 @@ main {
   height: 80px;
   overflow: hidden;
   margin: 20px;
+  cursor: pointer;
 }
 .header__logo img {
   width: 100%;
